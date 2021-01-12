@@ -1,6 +1,6 @@
 import requests
 
-url = 'https://classroom.powerschool.com/'
+url = 'https://powerschool.com'
 
 request_response = requests.head(url)
 status_code = request_response.status_code
