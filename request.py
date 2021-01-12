@@ -1,12 +1,7 @@
-from flask import Flask, redirect, url_for
+import requests
 
-app = Flask(__name__)
-name =
+url = 'https://classroom.powerschool.com/'
 
-
-@app.route("/")
-def home():
-	return render_template("index.html", content=No)
-
-if __name__ == "__main__":
-	app.run()
+request_response = requests.head(url)
+status_code = request_response.status_code
+website_is_up = status_code == 200
